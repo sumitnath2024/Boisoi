@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বইয়ের বিস্তারিত - বইসই</title>
+  <link rel="stylesheet" href="css/book-details-styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/book-details.js" defer></script>
+</head>
+<body>
+  <div class="details-container">
+    <header>
+      <h1 id="bookName">বইয়ের নাম</h1>
+      <p id="authorName">লেখক: <span id="author"></span></p>
+      <p id="bookCategory">বিভাগ: <span id="category"></span></p>
+      <p id="bookDescription">বর্ণনা: <span id="description"></span></p>
+      <p id="bookPrice">মূল্য: ৳<span id="price"></span></p>
+    </header>
+    <div class="chapter-list">
+      <h2>অধ্যায়ের তালিকা</h2>
+      <ul id="chapters">
+        <!-- Chapters will be dynamically added here -->
+      </ul>
+    </div>
+    <div class="options">
+      <button id="readFreeChapter">ফ্রি অধ্যায় পড়ুন</button>
+      <button id="purchaseBook">বইটি কিনুন</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সাবস্ক্রাইবড ব্যবহারকারী ড্যাশবোর্ড - বইসই</title>
+  <link rel="stylesheet" href="css/dashboard-styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="welcome">
+        <h2 id="welcomeMessage">স্বাগতম, ব্যবহারকারী</h2>
+      </div>
+      <div class="datetime">
+        <h3 id="currentDateTime"></h3>
+      </div>
+    </div>
+    <div class="menu">
+      <a href="bookstore.html" target="contentFrame" class="menu-link"><i class="fas fa-home"></i> হোম</a>
+      <a href="purchase-book.html" target="contentFrame" class="menu-link"><i class="fas fa-history"></i> ক্রয়</a>
+      <a href="profile.html" target="contentFrame" class="menu-link"><i class="fas fa-user"></i> প্রোফাইল</a>
+      <a href="book-submission.html" target="contentFrame" class="menu-link"><i class="fas fa-upload"></i> বই জমা</a>     
+      <a href="#" id="logout" class="menu-link"><i class="fas fa-sign-out-alt"></i> লগআউট</a>
+    </div>
+    <div class="content">
+      <iframe name="contentFrame" src="bookstore.html" frameborder="0"></iframe>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentDateTime = document.getElementById('currentDateTime');
+      setInterval(() => {
+        const now = new Date();
+        currentDateTime.textContent = now.toLocaleString('bn-BD');
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

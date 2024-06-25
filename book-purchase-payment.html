@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বই কেনার পেমেন্ট - বইসই</title>
+  <link rel="stylesheet" href="css/payment-styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/book-purchase-payment.js" defer></script>
+</head>
+<body>
+  <div class="payment-container">
+    <header>
+      <h1>বই কেনার পেমেন্ট</h1>
+    </header>
+    <form id="purchasePaymentForm">
+      <label for="bookName">বইয়ের নাম:</label>
+      <input type="text" id="bookName" name="bookName" readonly>
+
+      <label for="authorName">লেখকের নাম:</label>
+      <input type="text" id="authorName" name="authorName" readonly>
+
+      <label for="price">মূল্য:</label>
+      <input type="text" id="price" name="price" readonly>
+
+      <label for="paymentMethod">পেমেন্ট পদ্ধতি:</label>
+      <select id="paymentMethod" name="paymentMethod" required>
+        <option value="upi">UPI</option>
+        <option value="credit">ক্রেডিট কার্ড</option>
+        <option value="debit">ডেবিট কার্ড</option>
+      </select>
+
+      <button type="submit">পেমেন্ট করুন</button>
+    </form>
+  </div>
+</body>
+</html>

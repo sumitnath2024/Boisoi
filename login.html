@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>লগইন - BoiSoi</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/login.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>লগইন করুন</h1>
+    <p>লগইন করতে নিচের ফর্মটি পূরণ করুন।</p>
+    <form id="loginForm">
+      <input type="email" id="email" name="email" placeholder="ইমেল" required>
+      <input type="password" id="password" name="password" placeholder="পাসওয়ার্ড" required>
+      <label>
+        <input type="checkbox" id="rememberMe" name="rememberMe">
+        মনে রাখুন
+      </label>
+      <div class="forgot-password">
+        <a href="#">পাসওয়ার্ড ভুলে গেছেন?</a>
+      </div>
+      <button type="submit">লগইন</button>
+    </form>
+    <div class="register-link">
+      <p>অ্যাকাউন্ট নেই? <a href="register.html">নিবন্ধন করুন</a></p>
+    </div>
+  </div>
+</body>
+</html>

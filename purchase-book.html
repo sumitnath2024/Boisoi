@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বই কিনুন - বইসই</title>
+  <link rel="stylesheet" href="css/purchase-book-styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/purchase-book.js" defer></script>
+</head>
+<body>
+  <div class="purchase-container">
+    <header>
+      <h1 id="bookName">বইয়ের নাম</h1>
+      <p id="authorName">লেখক: <span id="author"></span></p>
+      <p id="bookPrice">মূল্য: ৳<span id="price"></span></p>
+    </header>
+    <div class="payment-options">
+      <h2>পেমেন্ট অপশন</h2>
+      <form id="paymentForm">
+        <label>
+          <input type="radio" name="paymentMethod" value="UPI" required>
+          UPI
+        </label>
+        <label>
+          <input type="radio" name="paymentMethod" value="Credit/Debit Card" required>
+          ক্রেডিট/ডেবিট কার্ড
+        </label>
+        <button type="submit">কিনুন</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

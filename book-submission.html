@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বই জমা দিন - বইসই</title>
+  <link rel="stylesheet" href="css/book-submission-styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/book-submission.js" defer></script>
+</head>
+<body>
+  <div class="submission-container">
+    <header>
+      <h1>বই জমা দিন</h1>
+    </header>
+    <form id="bookSubmissionForm">
+      <label for="bookTitle">বইয়ের শিরোনাম:</label>
+      <input type="text" id="bookTitle" name="bookTitle" required>
+      
+      <label for="bookCategory">বইয়ের বিভাগ:</label>
+      <input type="text" id="bookCategory" name="bookCategory" required>
+      
+      <label for="description">বর্ণনা:</label>
+      <textarea id="description" name="description" required></textarea>
+      
+      <label for="price">মূল্য:</label>
+      <input type="number" id="price" name="price" required>
+      
+      <label for="bookCover">বইয়ের কভার আপলোড করুন (jpg, jpeg, png):</label>
+      <input type="file" id="bookCover" name="bookCover" accept="image/jpeg, image/png" required>
+      
+      <label for="chapterFiles">অধ্যায় ফাইলগুলি আপলোড করুন (doc, docx):</label>
+      <input type="file" id="chapterFiles" name="chapterFiles" accept=".doc, .docx" multiple required>
+      
+      <label for="messageToAdmin">অ্যাডমিনকে বার্তা:</label>
+      <textarea id="messageToAdmin" name="messageToAdmin"></textarea>
+      
+      <button type="submit">জমা দিন</button>
+    </form>
+  </div>
+</body>
+</html>

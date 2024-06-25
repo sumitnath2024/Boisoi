@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>লেখক প্রোফাইল - বইসই</title>
+  <link rel="stylesheet" href="css/author-profile-styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/author-profile.js" defer></script>
+</head>
+<body>
+  <div class="profile-container">
+    <header>
+      <h1>লেখক প্রোফাইল</h1>
+    </header>
+    <form id="authorProfileForm">
+      <label for="name">নাম:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="address">ঠিকানা:</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label for="dob">জন্ম তারিখ:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="contactNo">যোগাযোগ নম্বর:</label>
+      <input type="tel" id="contactNo" name="contactNo" required>
+
+      <label for="qualification">যোগ্যতা:</label>
+      <input type="text" id="qualification" name="qualification" required>
+
+      <label for="upiId">UPI আইডি:</label>
+      <input type="text" id="upiId" name="upiId" required>
+
+      <label for="about">নিজের সম্পর্কে লিখুন (১০০০ শব্দ):</label>
+      <textarea id="about" name="about" maxlength="1000" required></textarea>
+
+      <label for="profilePicture">প্রোফাইল ছবি আপলোড করুন:</label>
+      <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+      
+      <div id="profilePictureDisplay" class="profile-picture-display">
+        <!-- Profile picture will be displayed here if available -->
+      </div>
+
+      <button type="submit">সংরক্ষণ করুন</button>
+    </form>
+  </div>
+</body>
+</html>

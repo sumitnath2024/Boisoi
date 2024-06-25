@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বই পড়ুন - বইসই</title>
+  <link rel="stylesheet" href="css/read-book-styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.88/epub.min.js"></script>
+  <script src="js/read-book.js" defer></script>
+</head>
+<body>
+  <div class="reader-container">
+    <div class="toolbar">
+      <button id="prevPage">পূর্ববর্তী পৃষ্ঠা</button>
+      <button id="nextPage">পরবর্তী পৃষ্ঠা</button>
+      <label for="fontSize">ফন্ট আকার:</label>
+      <select id="fontSize">
+        <option value="small">ছোট</option>
+        <option value="medium" selected>মাঝারি</option>
+        <option value="large">বড়</option>
+      </select>
+      <label for="theme">থিম:</label>
+      <select id="theme">
+        <option value="light" selected>আলো</option>
+        <option value="dark">অন্ধকার</option>
+      </select>
+    </div>
+    <div id="bookContent" class="book-content"></div>
+  </div>
+</body>
+</html>

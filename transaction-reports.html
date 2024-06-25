@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>লেনদেন রিপোর্ট - বইসই</title>
+  <link rel="stylesheet" href="css/transaction-reports-styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/transaction-reports.js" defer></script>
+</head>
+<body>
+  <div class="reports-container">
+    <header>
+      <h1>লেনদেন রিপোর্ট</h1>
+      <div class="filters">
+        <input type="date" id="filterDate" placeholder="তারিখ">
+        <input type="text" id="filterUser" placeholder="ব্যবহারকারী">
+        <input type="text" id="filterBook" placeholder="বইয়ের নাম">
+        <button id="filterButton">ফিল্টার করুন</button>
+      </div>
+    </header>
+    <div id="transactionsList" class="transactions-list">
+      <!-- Transactions will be dynamically added here -->
+    </div>
+    <button id="exportButton">রিপোর্ট এক্সপোর্ট করুন</button>
+  </div>
+</body>
+</html>
