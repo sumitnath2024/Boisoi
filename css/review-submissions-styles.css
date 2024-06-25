@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+.review-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+header input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submissions-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.submission-item {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.submission-item h2 {
+  margin: 0 0 10px 0;
+}
+
+.submission-item p {
+  margin: 5px 0;
+}
+
+.submission-item .actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions .view-button {
+  background-color: #008CBA; /* Blue */
+  color: white;
+}
+
+.actions .reject-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.actions .modify-button {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+
+.actions .publish-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
